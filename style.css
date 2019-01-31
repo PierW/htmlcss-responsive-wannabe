@@ -3,6 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
+  max-width: 100%;
 }
 
 /* BLOCCO LEZIONI */
@@ -64,4 +65,51 @@ img{
 
 .clear {
   clear:both;
+}
+
+.burgermenu {
+  background-color: black;
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+/* Inizio lato responsive */
+
+@media screen and (max-width: 750px) {
+  .burgermenu {
+    display: block;
+  }
+
+  #steps .row > .left,
+  #steps .row > .central{
+    width: 50%;
+  }
+
+  #steps .row > .right{
+    width: 100%;
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .burgermenu {
+    display: block;
+  }
+
+  #lezioni .row > .left,
+  #lezioni .row > .right{
+    width: 100%;
+  }
+
+
+  #steps .row > .left,
+  #steps .row > .central,
+  #steps .row > .right{
+    width: 100%;
+    margin-top: 80px;
+  }
 }
